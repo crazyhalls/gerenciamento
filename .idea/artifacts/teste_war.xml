@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="teste:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="incubadora-teste.war">
+      <element id="artifact" artifact-name="teste:war exploded" />
+    </root>
+  </artifact>
+</component>

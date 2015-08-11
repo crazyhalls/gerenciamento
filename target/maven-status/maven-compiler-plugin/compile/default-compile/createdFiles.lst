@@ -1,0 +1,7 @@
+br\com\s2it\incubadora\repository\ProductRepository.class
+br\com\s2it\incubadora\config\AppConfig.class
+br\com\s2it\incubadora\service\ProductService.class
+br\com\s2it\incubadora\model\Product.class
+br\com\s2it\incubadora\endpoint\ProductEndpoint.class
+br\com\s2it\incubadora\controller\ProductController.class
+br\com\s2it\incubadora\repository\AbstractRepository.class
