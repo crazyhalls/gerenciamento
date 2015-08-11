@@ -1,0 +1,11 @@
+.classpath
+.settings
+.project
+target/*
+*.sublime-project
+*.sublime-workspace
+.metadata
+.DS_Store
+.sass-cache
+bin
+.idea/*
