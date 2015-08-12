@@ -24,13 +24,28 @@ public class ProductService {
 		return repository.listAll();
 	}
 	
-	public void update(Product product){
-//		Product productFound = (Product) repository.findById(product.getId());
-		
+	public void update(Product product){		
 		repository.update(product);
 	}
 	
 	public void delete(Product product){
 		repository.delete(product);
+	}
+	
+	public boolean canRemove(int id){
+		
+		Product product = null;
+		
+		try {
+			product = (Product) repository.findById(id);
+		} catch (Exception e) {
+			return false;
+		}
+		
+		if(product != null){
+			return true;
+		}
+		
+		return false;
 	}
 }

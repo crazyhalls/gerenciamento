@@ -23,7 +23,7 @@ public class ProductEndpoint {
 	private ProductService service;
 	
 	@RequestMapping(value = "", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Product> save(@RequestBody Product product){
+	public ResponseEntity<?> save(@RequestBody Product product){
 		
 		service.save(product);
 		
@@ -37,20 +37,30 @@ public class ProductEndpoint {
 	}
 	
 	@RequestMapping(value = "", method = RequestMethod.PATCH, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Product> update(@RequestBody Product product){
+	public ResponseEntity<?> update(@RequestBody Product product){
 		
 		service.update(product);
 		
 		return new ResponseEntity<Product> (HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = "", method = RequestMethod.DELETE, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Product> delete(@PathVariable("id") int id){
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> delete(@PathVariable("id") int id){
 		
-		Product product = new Product();
-		product.setId(id);
-		service.delete(product);
+		service.delete(new Product(id));
 		
 		return new ResponseEntity<Product> (HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/remove/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> list(@PathVariable("id") int id){
+		
+		HttpStatus status = HttpStatus.NOT_FOUND;
+		
+		if(service.canRemove(id)){
+			status = HttpStatus.OK;
+		}
+		
+		return new ResponseEntity<Product>(status);
 	}
 }
