@@ -23,4 +23,14 @@ public class ProductService {
 	public List<Product> listAll(){
 		return repository.listAll();
 	}
+	
+	public void update(Product product){
+//		Product productFound = (Product) repository.findById(product.getId());
+		
+		repository.update(product);
+	}
+	
+	public void delete(Product product){
+		repository.delete(product);
+	}
 }
