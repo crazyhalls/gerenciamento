@@ -1,6 +1,8 @@
 package br.com.s2it.incubadora.model;
 
 import javax.persistence.*;
+
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -8,9 +10,22 @@ import java.math.BigDecimal;
  */
 @Entity
 @Table(name = "product")
-public class Product {
+public class Product implements Serializable{
 
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public Product() {
+		
+	}
+	
+	public Product(int id) {
+		this.id = id;
+	}
+	
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 

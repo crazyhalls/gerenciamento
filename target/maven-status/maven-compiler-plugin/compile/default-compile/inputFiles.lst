@@ -1,7 +1,8 @@
-C:\Users\s2it_rmachado\OneDrive\estudo\java\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\service\ProductService.java
-C:\Users\s2it_rmachado\OneDrive\estudo\java\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\repository\AbstractRepository.java
-C:\Users\s2it_rmachado\OneDrive\estudo\java\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\endpoint\ProductEndpoint.java
-C:\Users\s2it_rmachado\OneDrive\estudo\java\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\controller\ProductController.java
-C:\Users\s2it_rmachado\OneDrive\estudo\java\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\model\Product.java
-C:\Users\s2it_rmachado\OneDrive\estudo\java\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\config\AppConfig.java
-C:\Users\s2it_rmachado\OneDrive\estudo\java\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\repository\ProductRepository.java
+D:\Renan\linguagens\java\incubadora\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\repository\AbstractRepository.java
+D:\Renan\linguagens\java\incubadora\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\model\Resource.java
+D:\Renan\linguagens\java\incubadora\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\repository\ProductRepository.java
+D:\Renan\linguagens\java\incubadora\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\endpoint\ProductEndpoint.java
+D:\Renan\linguagens\java\incubadora\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\service\ProductService.java
+D:\Renan\linguagens\java\incubadora\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\controller\ProductController.java
+D:\Renan\linguagens\java\incubadora\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\config\AppConfig.java
+D:\Renan\linguagens\java\incubadora\gerenciamento-produtos\src\main\java\br\com\s2it\incubadora\model\Product.java

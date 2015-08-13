@@ -16,6 +16,10 @@ public abstract class AbstractRepository {
 	public void persist(Object entity) {
         getSession().persist(entity);
     }
+	
+	public void update(Object entity) {
+        getSession().update(entity);
+    }
  
     public void delete(Object entity) {
         getSession().delete(entity);

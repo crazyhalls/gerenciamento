@@ -2,9 +2,9 @@ package br.com.s2it.incubadora.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import br.com.s2it.incubadora.model.Product;
 import br.com.s2it.incubadora.service.ProductService;
@@ -22,18 +22,19 @@ public class ProductController {
 	private ProductService service;
 	
     @RequestMapping(value = "", method = RequestMethod.POST)
-    public String save(Product product, ModelMap model){    	
+    public ModelAndView save(Product product){    	
     	
     	service.save(product);
     	
-        return listAll(model);
+        return listAll();
     }
     
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public String listAll(ModelMap model){    	
+    public ModelAndView listAll(){    	
     	
-    	model.addAttribute("products", service.listAll());
-    	model.addAttribute("tes", "dsdasdasdsad");
-        return VIEW;
+    	ModelAndView modView = new ModelAndView(VIEW);
+    	modView.addObject("products", service.listAll());
+    	modView.addObject("tes", "dsdasdasdsad");
+        return modView;
     }
 }
