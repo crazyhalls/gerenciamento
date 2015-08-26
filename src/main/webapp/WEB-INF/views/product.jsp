@@ -6,25 +6,23 @@
 <title></title>
 </head>
 <body>
-	${tes}
-	<form method="post" action="/product">
-		<table>
-			<tr>
-				<td><label>Descrição:</label></td>
-				<td><input type="text" name="description" id="description" /></td>
-			</tr>
-			<tr>
-				<td><label>Preço:</label></td>
-				<td><input type="text" name="price" id="price" /></td>
-			</tr>
-		</table>
-		<input type="submit" value="Salvar" />
+
+	<form action="/product/${product.id }">
+		" method="POST">
+		<fieldset>
+			<legend>Editar Produto</legend>
+
+			<label for="name">Nome:</label> <input id="name" type="text"
+				name="product.name" value="${product.name }" /> <label
+				for="description">Descrição:</label>
+			<textarea id="description" name="product.description">
+        ${product.description }
+      </textarea>
+
+			<button type="submit" name="_method" value="PUT">Enviar</button>
+		</fieldset>
 	</form>
 
-	<br>
-	<br>
-	<h1>Produtos</h1>
-	<br>
-	${products}
+
 </body>
 </html>
